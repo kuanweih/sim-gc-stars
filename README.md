@@ -2,10 +2,6 @@
 Simulate globular clusters with isochrones package
 
 
-# Parameters and Database
-Specify parameters
-
-
 # How to use it:
 0. Clean the work directory: `bash clean.sh`
 1. Specify parameters
