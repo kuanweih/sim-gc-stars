@@ -66,11 +66,11 @@ def csv_gc_detail(nstar, feh, age, dist):
     Lv_tot = np.sum(df['Lv_abs'])
     Mv_tot = calc_Mv(Lv_tot)
     Mass_tot = np.sum(df['mass'])
-    print('GC: Mv = %0.1f mag' % Mv_tot)
-    print('GC: Lv = %0.1e Lsun' % Lv_tot)
-    print('GC: Mass = %.1e Msun\n' % Mass_tot)
+    print('GC: Mv = %0.2f mag' % Mv_tot)
+    print('GC: Lv = %0.2e Lsun' % Lv_tot)
+    print('GC: Mass = %.2e Msun\n' % Mass_tot)
 
-    fname = 'Mv%0.1f_Lv%0.1e_Mass%.1e_Ni%d_Nf%d' % (Mv_tot, Lv_tot, Mass_tot, nstar, len(df))
+    fname = 'Mv%0.2f_Lv%0.2e_Mass%.2e_Ni%d_Nf%d' % (Mv_tot, Lv_tot, Mass_tot, nstar, len(df))
     df.to_csv(OUTPUTPATH + fname, index=False)
     print('Done saving the csv')
     print('\n--------------------------------------------------\n')
@@ -79,7 +79,7 @@ def csv_gc_detail(nstar, feh, age, dist):
 
 if __name__ == '__main__':
 
-    ngc_tot = 5    # total number of simulated GCs
+    ngc_tot = 1000    # total number of simulated GCs
 
     create_dir(OUTPUTPATH)
 
