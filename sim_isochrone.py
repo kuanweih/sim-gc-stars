@@ -79,7 +79,7 @@ def csv_gc_detail(nstar, feh, age, dist):
 
 if __name__ == '__main__':
 
-    ngc_tot = 1000    # total number of simulated GCs
+    ngc_tot = 5    # total number of simulated GCs
 
     create_dir(OUTPUTPATH)
 
@@ -87,7 +87,7 @@ if __name__ == '__main__':
     age = np.log10(12e9)    # 12 Gyr
     dist = 1e3    # 1 kpc
 
-    nstars = np.logspace(1., 5., num=ngc_tot)
+    nstars = np.logspace(2., 6., num=ngc_tot)
 
     for nstar in nstars:
         nstar = int(nstar)
